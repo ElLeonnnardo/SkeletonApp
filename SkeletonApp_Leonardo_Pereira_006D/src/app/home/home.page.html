@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="Large" >SkelletonApp </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      ¡Bienvenido!
+    </ion-card-header>
+    <ion-card-content>
+      <p>Usuario: {{ userData.username }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" [class.ion-input-slide]="limpiarAnimation"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input [(ngModel)]="apellido" [class.ion-input-slide]="limpiarAnimation"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nivel de Educación</ion-label>
+    <br>
+    <ion-select [(ngModel)]="nivelEducacion">
+      <ion-select-option value="Primaria">Primaria</ion-select-option>
+      <ion-select-option value="Secundaria">Secundaria</ion-select-option>
+      <ion-select-option value="Universidad">Universidad</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+<ion-item>
+    <ion-label position="floating">Fecha de Nacimiento</ion-label>
+    <br>
+    <ion-datetime [(ngModel)]="fechaNacimiento"></ion-datetime>
+  </ion-item>
+
+  <!-- <mat-form-field>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>   -->
+
+<!--   <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" placeholder="Date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> -->
+
+  <ion-button expand="full" (click)="limpiarCampos()">Limpiar</ion-button>
+  <ion-button expand="full" (click)="mostrarInfo()">Mostrar</ion-button>
+</ion-content>
+

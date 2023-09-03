@@ -1,0 +1,47 @@
+@keyframes slideAndFade {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 0.2;
+    }
+}
+
+ion-title {
+    animation: slideAndFade 2.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .ion-input-slide {
+    animation: slideRight 1s;
+  }
+  
+  .ion-hide {
+    opacity: 0;
+  }
+  @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
